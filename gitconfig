@@ -1,0 +1,12 @@
+[user]
+	name = Konstantin Bauer
+	# no email forces prompt to enter email -> leaves option to enter no-reply mail from GitHub/GitLab
+
+[core]
+	editor = vim
+
+[alias]
+  branches = branch -a
+  remotes = remote -v
+  lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = status

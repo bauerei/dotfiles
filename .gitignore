@@ -1,5 +1,10 @@
-oh-my-zsh/
-vim/vim
-vim/.netrwhist
-chef/
-private
+# As soon as you execute the setup script, ~/.config will be symlinked to config/ of this repo
+# From now on, any app will store its config in config/ . 
+# Therefore it is ignored by default and only appropriate configs must be permitted explicitly
+
+# Ignore everything in config/
+config/*
+
+# Add exception to appropriate files
+config/fish/fish_variables
+!config/fish/
