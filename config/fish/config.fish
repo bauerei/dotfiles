@@ -17,3 +17,8 @@ alias cat=batcat # in Ubuntu bat is installed as batcat
 # ---------
 # vim as default text editor
 set -gx EDITOR vim
+
+# --------
+# starship
+# --------
+starship init fish | source
