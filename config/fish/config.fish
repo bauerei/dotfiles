@@ -7,7 +7,7 @@ alias ..="cd .."
 # apt
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
-alias upgrate="sudo apt update && apt upgrade"
+alias upgrate="sudo apt update && sudo apt upgrade"
 
 # programs
 alias cat=batcat # in Ubuntu bat is installed as batcat
