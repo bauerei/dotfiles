@@ -8,3 +8,8 @@ config/*
 # Add exception to appropriate files
 config/fish/fish_variables
 !config/fish/
+
+!config/regolith/
+config/regolith/flags
+config/regolith/i3xrocks
+config/regolith/Xresources
