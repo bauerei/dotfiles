@@ -525,3 +525,17 @@ set_from_resource $i3-wm.program.2 i3-wm.program.2 :
 exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
+
+###############################################################################
+# Assign applications to specific workspaces
+# see https://i3wm.org/docs/userguide.html#assign_workspace
+###############################################################################
+
+# Assign Thunderbird to workspace 9
+assign [class="Thunderbird"] $ws9
+
+###############################################################################
+# Assign workspaces to specific screens
+# see https://i3wm.org/docs/userguide.html#workspace_screen
+###############################################################################
+workspace "$ws9" output DP-2-2-1
