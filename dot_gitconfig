@@ -1,0 +1,55 @@
+# See https://stackoverflow.com/a/3322412 for git aliases with arguments
+
+[user]
+  name = Konstantin Bauer
+  # Blocks commit if no email is setup in local git config
+  useConfigOnly = true
+  signingkey = ~/.ssh/id_ed25519.pub
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
+[core]
+  editor = hx
+
+[alias]
+  branches = branch -a
+  remotes = remote -v
+  lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgc = "!f() { current = git branch --show-current; git log --graph --abbrev-commit --decorate --first-parent $current; }; f" # log current branch
+  st = status
+  ap = add -p
+  diffs = diff --staged
+  restores = restore --staged
+  files = diff-tree --no-commit-id --name-status -r # needs commit hash as argument. Shows all files changed in that commit
+  sm = submodule update --init --recursive
+  mrdiff = diff origin/develop..HEAD # show diff as if current branch would be merged into develop
+  co = checkout
+  cob = checkout -b
+  scm = show -s --format=%B # show full commit message
+  fhist = "!f() { git log --follow -p -- $1; }; f" # history of a file, e.g. fhist /full/path/to/file
+
+  # Stash
+  stl = stash list
+  stp = stash pop
+  sts = "!f() { git stash show -p stash@{\"$1\"}; }; f" # needs argument, e.g. git sts 0 (which would show the first stash in the list)
+  sta = "!f() { git stash apply stash@{\"$1\"}; }; f"   # needs argument, e.g. git sta 0 
+  std = "!f() { git stash drop stash@{\"$1\"}; }; f"    # needs argument, e.g. git std 0 
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[delta]
+  line-numbers = true
