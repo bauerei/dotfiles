@@ -1,0 +1,5 @@
+command = /opt/homebrew/bin/fish
+theme = tokyonight
+
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
