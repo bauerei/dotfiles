@@ -54,3 +54,7 @@
 
 [delta]
   line-numbers = true
+
+[push]
+  autoSetupRemote = true
+  default = current
