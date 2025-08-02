@@ -16,6 +16,11 @@ alias lg=lazygit
 set -gx EDITOR hx
 set -gx XDG_CONFIG_HOME $HOME/.config
 
+if set -q ZELLIJ
+else
+    zellij
+end
+
 # --------
 # starship
 # --------
