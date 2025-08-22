@@ -1,5 +1,7 @@
 command = /opt/homebrew/bin/fish
 theme = tokyonight
+# treat left option key as ALT for keybindings, e.g. for fzf or zellij
+macos-option-as-alt = left
 
 keybind = cmd+left=previous_tab
 keybind = cmd+right=next_tab
